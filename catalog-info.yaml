@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: frontend-task
+  annotations:
+    github.com/project-slug: mo-salah1998/frontend-task
+spec:
+  type: other
+  lifecycle: unknown
+  owner: mo-salah1998
