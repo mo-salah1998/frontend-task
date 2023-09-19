@@ -4,6 +4,7 @@ import axios from 'axios';
 
 
 function App() {
+    //to collect user environment parameters 
     const [environment, setEnvironment] = useState({
         environmentName: '',
         selectedScenario: '',
@@ -11,6 +12,8 @@ function App() {
 
     });
 
+    
+    //handle all the differents inputs with this function
     const handlechange = (e) => {
         const { name, value } = e.target
         setEnvironment({...environment,
@@ -18,10 +21,11 @@ function App() {
         })
     }
 
-
+    // I use the table to declare options to make it easy if we need to add or remove an option from any lists and we don't need to change anything else in code
     let images = ["image-1", "image-2", "image-3"];
     let types = ["Kubernetes RBAC", "Dockerfile"]
 
+    
     const handleSubmit = async (e) => {
         e.preventDefault()
 
